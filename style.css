@@ -10,17 +10,18 @@
 }
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr;
   font-family: "Robotto", sans-serif;
 }
 
 .dashboard {
+  position: fixed;
+  height: 100vh;
   background: var(--white-bg);
-  box-shadow: 11px 0px 48px -8px rgba(0, 0, 0, 1);
+  box-shadow: 11px 0px 20px rgba(0, 0, 0, 0.1);
 }
 .movies {
   background: var(--ligh-gray-color);
+  margin-left: 16rem;
 }
 /* USER Wrapper */
 .user-wrapper {
