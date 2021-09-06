@@ -49,22 +49,24 @@
         <h2 class="movies__header--title">Trending Movies</h2>
         <input type="search" name="search" id="search" placeholder="Search" />
       </div>
-      <div class="movies__container">
-        <div class="movie__card">
-          <div class="movie__card--poster">
-            <img
-              src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
-              alt="Movie Poster"
-              class="movie__poster"
-            />
-            <div class="rating">
-              <p class="rating-count">4.4</p>
-            </div>
-          </div>
-          <h4 class="movie__name">Fight Club</h4>
-          <p class="movie__genre">Drama</p>
-        </div>
-      </div>
+      <div class="movies__container"></div>
     </div>
+
+    <template id="template">
+      <div class="movie__card">
+        <div class="movie__card--poster">
+          <img
+            src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
+            alt="Movie Poster"
+            class="movie__poster"
+          />
+          <div class="rating">
+            <p class="rating-count">4.4</p>
+          </div>
+        </div>
+        <h4 class="movie__name">Fight Club</h4>
+        <p class="movie__genre">Drama</p>
+      </div>
+    </template>
   </body>
 </html>
