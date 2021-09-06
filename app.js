@@ -2,7 +2,7 @@ const API_KEY = "25210924b2f5041e4ce23097c2cadaea";
 const TRENDING_URL = `https://api.themoviedb.org/3/trending/movies/day?api_key=${API_KEY}`;
 
 const moviesContainer = document.querySelector(".movies__container");
-
+const trendingMovies = document.querySelector("[data-trending]");
 const searchInput = document.querySelector("#search");
 
 const genres = [
@@ -88,7 +88,12 @@ const template = document.getElementById("template");
 
 searchInput.addEventListener("change", (e) => {
   const query = e.target.value;
+  if (query === "") return;
   fetchSearchMovie(query);
+});
+
+trendingMovies.addEventListener("click", (e) => {
+  fetchTrendingMovies();
 });
 
 async function fetchTrendingMovies() {

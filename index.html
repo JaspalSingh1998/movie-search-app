@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesarSidePart&accessoriesType=Sunglasses&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Heather&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +31,7 @@
       <nav class="nav">
         <h4 class="nav__heading">Main</h4>
         <ul class="types__nav">
-          <li class="type__link">Trending Movies</li>
+          <li class="type__link" data-trending>Trending Movies</li>
           <li class="type__link">New Releases</li>
           <li class="type__link">My Collection</li>
           <li class="type__link">Watch Later</li>
@@ -47,7 +52,13 @@
     <div class="movies">
       <div class="movies__header">
         <h2 class="movies__header--title">Trending Movies</h2>
-        <input type="search" name="search" id="search" placeholder="Search" />
+        <input
+          type="search"
+          name="search"
+          autocomplete="off"
+          id="search"
+          placeholder="Search"
+        />
       </div>
       <div class="movies__container"></div>
     </div>
