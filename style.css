@@ -22,6 +22,7 @@ body {
 .movies {
   background: var(--ligh-gray-color);
   margin-left: 16rem;
+  min-height: 100vh;
 }
 /* USER Wrapper */
 .user-wrapper {
@@ -91,11 +92,28 @@ input {
 }
 .movie__card--poster {
   border-radius: 5px;
+  position: relative;
 }
 .movie__poster {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+.rating {
+  position: absolute;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  right: -20px;
+  bottom: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.rating-count {
+  color: #706d6d;
+  font-weight: 700;
 }
 .movie__name {
   font-weight: 700;
