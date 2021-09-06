@@ -3,6 +3,8 @@ const TRENDING_URL = `https://api.themoviedb.org/3/trending/movies/day?api_key=$
 
 const moviesContainer = document.querySelector(".movies__container");
 
+const searchInput = document.querySelector("#search");
+
 const genres = [
   {
     id: 28,
@@ -84,10 +86,21 @@ const genres = [
 
 const template = document.getElementById("template");
 
+searchInput.addEventListener("change", (e) => {
+  const query = e.target.value;
+  fetchSearchMovie(query);
+});
+
 async function fetchTrendingMovies() {
   const response = await fetch(TRENDING_URL);
   const data = await response.json();
-  //   console.log(data.results);
+  movieDisplay(data.results);
+}
+
+async function fetchSearchMovie(query) {
+  const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=25210924b2f5041e4ce23097c2cadaea&query=${query}`;
+  const response = await fetch(SEARCH_URL);
+  const data = await response.json();
   movieDisplay(data.results);
 }
 
@@ -98,6 +111,7 @@ function fetchGenre(id) {
 }
 
 function movieDisplay(movies) {
+  moviesContainer.innerHTML = "";
   movies.map((movie) => {
     let movieName = movie.name || movie.original_title;
     let posterPath = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
