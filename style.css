@@ -79,3 +79,29 @@ input {
   background: transparent;
   border-bottom: 1px solid #706d6d;
 }
+.movies__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 4rem;
+}
+.movie__card {
+  max-width: 300px;
+}
+.movie__card--poster {
+  border-radius: 5px;
+}
+.movie__poster {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.movie__name {
+  font-weight: 700;
+  color: #706d6d;
+  margin-bottom: 0.25rem;
+}
+.movie__genre {
+  color: #706d6d;
+  font-size: 0.75rem;
+}
