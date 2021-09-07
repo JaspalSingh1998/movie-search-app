@@ -12,7 +12,7 @@ async function getMovie(id) {
     `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
   );
 
-  const {
+  let {
     title,
     tagline,
     release_date,
@@ -34,12 +34,23 @@ async function getMovie(id) {
 
   //================================
   imgEl.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
-  titleEl.textContent = title;
-  taglineEl.textContent = tagline;
-  rdateEl.textContent = release_date;
-  overviewEl.textContent = overview;
-  revenueEl.textContent = revenue;
-  durationEl.textContent = runtime;
+  titleEl.innerHTML = `Title: ${title}`;
+  if (tagline === "") {
+    tagline = "Not Available";
+  }
+  taglineEl.innerHTML = `<span>Tagline:</span> ${tagline}`;
+  rdateEl.innerHTML = `<span>Released:</span> ${release_date}`;
+  overviewEl.innerHTML = `<span>Overview:</span> ${overview}`;
+  if (revenue < 1) {
+    revenue = "Not Available";
+  } else {
+    revenue = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(revenue);
+  }
+  revenueEl.innerHTML = `<span>Revenue:</span> ${revenue}`;
+  durationEl.innerHTML = `<span>Duration:</span> ${runtime} minutes`;
   container.appendChild(templateClone);
 }
 
