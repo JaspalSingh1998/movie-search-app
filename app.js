@@ -99,6 +99,7 @@ trendingMovies.addEventListener("click", (e) => {
 async function fetchTrendingMovies() {
   const response = await fetch(TRENDING_URL);
   const data = await response.json();
+  // console.log(data.results);
   movieDisplay(data.results);
 }
 
@@ -140,14 +141,14 @@ function movieDisplay(movies) {
     genreEl.textContent = genreId;
     moviesContainer.appendChild(templateClone);
     pageLink.addEventListener("click", (e) => {
-      handleClick();
+      handleClick(movie.id);
     });
   });
 }
 
-function handleClick() {
+function handleClick(id) {
   localStorage.clear();
-  localStorage.setItem("MOVIE_ID", JSON.stringify("Goldy King"));
+  localStorage.setItem("MOVIE_ID", JSON.stringify(id));
 }
 
 fetchTrendingMovies();
