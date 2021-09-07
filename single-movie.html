@@ -10,29 +10,33 @@
   <body>
     <div class="container">
       <a href="./index.html" class="btn">Go Back</a>
-      <article class="movie-info">
-        <img
-          src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
-          alt="Movie Poster"
-          class="single_movie_poster"
-        />
-        <div class="movie-data">
-          <h1 class="movie-title">Title: The Suicide Squad</h1>
-          <p class="tagline">
-            <span>Tagline:</span> "They're dying to save the world"
-          </p>
-          <p class="rdate"><span>Released:</span> July 27, 2021</p>
-          <p class="duration"><span>Duration:</span> 132 minutes</p>
-          <p><span>Revenue:</span> 4140,771,711.00</p>
-          <p class="overview">
-            <span>Overview:</span>
-            Supervillians Harley Quinn, Bloodsport, Pacemaker and a collection
-            of nutty cons at Belle Reve prison join the super-secret,
-            super-shady Task Force X as they are dropped of at the remote,
-            enemy-infused island of Corto Maltese.
-          </p>
-        </div>
-      </article>
+      <div class="movie-container">
+        <template id="movie-template">
+          <article class="movie-info">
+            <img
+              src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
+              alt="Movie Poster"
+              class="single_movie_poster"
+            />
+            <div class="movie-data">
+              <h1 class="movie-title">Title: The Suicide Squad</h1>
+              <p class="tagline">
+                <span>Tagline:</span> "They're dying to save the world"
+              </p>
+              <p class="rdate"><span>Released:</span> July 27, 2021</p>
+              <p class="duration"><span>Duration:</span> 132 minutes</p>
+              <p class="revenue"><span>Revenue:</span> 4140,771,711.00</p>
+              <p class="overview">
+                <span>Overview:</span>
+                Supervillians Harley Quinn, Bloodsport, Pacemaker and a
+                collection of nutty cons at Belle Reve prison join the
+                super-secret, super-shady Task Force X as they are dropped of at
+                the remote, enemy-infused island of Corto Maltese.
+              </p>
+            </div>
+          </article>
+        </template>
+      </div>
     </div>
     <script src="./movie.js"></script>
   </body>
