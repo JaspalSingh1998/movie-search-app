@@ -128,6 +128,10 @@ function movieDisplay(movies) {
     const ratingEl = templateClone.querySelector(".rating-count");
     const nameEl = templateClone.querySelector(".movie__name");
     const genreEl = templateClone.querySelector(".movie__genre");
+    const pageLink = templateClone.querySelector("[data-single-movie]");
+
+    // ===============================================
+
     // ===============================================
 
     imageEl.src = posterPath;
@@ -135,7 +139,15 @@ function movieDisplay(movies) {
     nameEl.textContent = movieName;
     genreEl.textContent = genreId;
     moviesContainer.appendChild(templateClone);
+    pageLink.addEventListener("click", (e) => {
+      handleClick();
+    });
   });
+}
+
+function handleClick() {
+  localStorage.clear();
+  localStorage.setItem("MOVIE_ID", JSON.stringify("Goldy King"));
 }
 
 fetchTrendingMovies();

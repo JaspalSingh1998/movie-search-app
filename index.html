@@ -64,20 +64,22 @@
     </div>
 
     <template id="template">
-      <div class="movie__card">
-        <div class="movie__card--poster">
-          <img
-            src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
-            alt="Movie Poster"
-            class="movie__poster"
-          />
-          <div class="rating">
-            <p class="rating-count">4.4</p>
+      <a href="./single-movie.html" data-single-movie>
+        <div class="movie__card">
+          <div class="movie__card--poster">
+            <img
+              src="https://image.tmdb.org/t/p/w500/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg"
+              alt="Movie Poster"
+              class="movie__poster"
+            />
+            <div class="rating">
+              <p class="rating-count">4.4</p>
+            </div>
           </div>
+          <h4 class="movie__name">Fight Club</h4>
+          <p class="movie__genre">Drama</p>
         </div>
-        <h4 class="movie__name">Fight Club</h4>
-        <p class="movie__genre">Drama</p>
-      </div>
+      </a>
     </template>
 
     <script src="./app.js"></script>

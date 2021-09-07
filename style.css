@@ -11,8 +11,21 @@
 body {
   min-height: 100vh;
   font-family: "Robotto", sans-serif;
+  background-color: var(--ligh-gray-color);
 }
-
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .dashboard {
   position: fixed;
   height: 100vh;
@@ -123,4 +136,51 @@ input {
 .movie__genre {
   color: #706d6d;
   font-size: 0.75rem;
+}
+
+/* =========================== */
+/* ========Single Movie======= */
+/* =========================== */
+.btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: rgb(5, 61, 42);
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+.single_movie_poster {
+  max-width: 400px;
+  border-radius: 10px;
+}
+.movie-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+}
+.movie-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.movie-data {
+  font-size: 1.2rem;
+}
+.movie-data > p {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+span {
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: underline;
+}
+.overview {
+  line-height: 1.6;
 }
